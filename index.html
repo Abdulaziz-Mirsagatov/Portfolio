@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/ba4436c6f7.js" crossorigin="anonymous"></script>
+    <title>Abdulaziz Mirsagatov - Portfolio</title>
+</head>
+<body class="grid">
+    <section class="home-section grid-item flexbox" id="home-section">
+        <nav class="navbar flexbox">
+            <button class="theme-switcher" id="theme-switcher">
+                <i class="dark-icon fa fa-moon"></i>
+                <div class="switch-ball" style="left: 0.5em;"></div>
+                <i class="light-icon fa fa-sun"></i>
+            </button>
+            <ul class="flexbox hamburger-menu" style="right: -100%;">
+                <li><a href="#home-section" class="link-item">Home</a></li>
+                <li><a href="#projects-section" class="link-item">Projects</a></li>
+                <li><a href="#contact-section" class="link-item">Contact</a></li>
+            </ul>
+            <ul class="flexbox menu">
+                <li><a href="#home-section" class="link-item">Home</a></li>
+                <li><a href="#projects-section" class="link-item">Projects</a></li>
+                <li><a href="#contact-section" class="link-item">Contact</a></li>
+            </ul>
+            <i class="fa fa-bars hamburger"></i>
+        </nav>
+
+        <div class="welcome-page flexbox">
+            <h1>Hi, I am Abdulaziz Mirsagatov</h1>
+            <h1>I am a Full-Stack Web Developer</h1>
+            <div class="bar"></div>
+            <div class="flexbox">
+                <a href="https://www.linkedin.com/in/abdulaziz-mirsagatov-085616230/" target="_blank"><i class="fa fa-linkedin linkedin-icon"></i></a>
+                <button class="resume-btn" onclick="window.open('files/Mirsagatov_Abdulaziz_Resume_2022.pdf')">Get Resume</button>
+            </div>
+        </div>
+    </section>
+    <section class="projects-section grid-item flexbox" id="projects-section">
+        <h1>My Projects</h1>
+        <div class="projects-container flexbox">
+            <div class="project-container flexbox">
+                <img src="./images/1.jpg" alt="project image" class="project-image">
+                <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic doloribus, ea sunt autem dolorum nobis.</p>
+            </div>
+            <div class="project-container flexbox">
+                <img src="./images/2.jpg" alt="project image" class="project-image">
+                <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic doloribus, ea sunt autem dolorum nobis.</p>
+            </div>
+            <div class="project-container flexbox">
+                <img src="./images/3.jpg" alt="project image" class="project-image">
+                <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic doloribus, ea sunt autem dolorum nobis.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section grid-item flexbox" id="contact-section">
+        <h1>Contact Me</h1>
+        <ul>
+            <li>Email: mirsagah@mail.uc.edu</li>
+            <li>Phone: +1 (513) 882-4628</li>
+        </ul>
+    </section>
+</body>
+<script src="main.js"></script>
+
+</html>
