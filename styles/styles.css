@@ -154,10 +154,6 @@ scrollbar-width: none;  /* Firefox */
     transition: color 0.5s;
 }
 
-.hamburger-menu a:hover, .menu a:hover{
-    color: var(--main-color);
-}
-
 .hamburger{
     font-size: xx-large;
     cursor: pointer;
@@ -210,12 +206,6 @@ scrollbar-width: none;  /* Firefox */
     transition: background-color, color 0.5s;
 }
 
-.resume-btn:hover, .welcome-page .flexbox .icon:hover{
-    background-color: var(--main-color);
-    color: var(--text-color);
-    box-shadow: 0 0 10px var(--main-color);
-}
-
 .projects-section{
     flex-direction: column;
     justify-content: start;
@@ -233,14 +223,14 @@ scrollbar-width: none;  /* Firefox */
     justify-content: space-between;
     align-items: center;
     gap: 2em;
-    width: min(80%, 50em);
+    width: min(90%, 50em);
 }
 
 .project-container{
     flex-direction: column;
     justify-content: space-between;
     gap: 1em;
-    box-shadow: 0 0 15px var(--text-color);
+    box-shadow: 0 0 10px var(--text-color);
     padding: 1em;
     border-radius: 10px;
 }
@@ -252,30 +242,24 @@ scrollbar-width: none;  /* Firefox */
 }
 
 .project-desc{
-    text-align: justify;
+    text-align: left;
 }
 
 .project-container .button-group{
     display: flex;
-    gap: 1em;
+    gap: 0.5em;
     justify-content: right;
 }
 
 .project-container .button-group button{
     padding: 0.5em 1em;
-    font-size: 1.2em;
+    font-size: 1em;
     border-radius: 8px;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     background-color: var(--text-color);
     color: var(--bg-color);
-}
-
-.project-container .button-group button:hover{
-    background-color: var(--main-color);
-    color: var(--text-color);
-    box-shadow: 0 0 10px var(--main-color);
 }
 
 .contact-section{
@@ -325,6 +309,10 @@ scrollbar-width: none;  /* Firefox */
         display: none !important;
     }
 
+    .project-container .button-group button{
+        font-size: 1.2em;
+    }
+
 }
 
 @media screen and (min-width: 1080px) {
@@ -346,5 +334,25 @@ scrollbar-width: none;  /* Firefox */
 
     .contact-section ul li{
         font-size: x-large;
+    }
+
+    .hamburger-menu a:hover, .menu a:hover{
+        color: var(--main-color);
+    }
+
+    .project-container .button-group button:hover{
+        background-color: var(--main-color);
+        color: var(--text-color);
+        box-shadow: 0 0 10px var(--main-color);
+    }
+
+    .resume-btn:hover, .welcome-page .flexbox .icon:hover{
+        background-color: var(--main-color);
+        color: var(--text-color);
+        box-shadow: 0 0 10px var(--main-color);
+    }
+
+    .project-desc{
+        font-size: 1.2em;
     }
 }
