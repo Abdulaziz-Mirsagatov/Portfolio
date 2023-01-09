@@ -134,6 +134,7 @@ scrollbar-width: none;  /* Firefox */
 }
 
 .hamburger-menu{
+    right: -100%;
     position: absolute;
     justify-content: center;
     align-items: center;
@@ -144,6 +145,10 @@ scrollbar-width: none;  /* Firefox */
     background-color: var(--hamburger-menu-bg);
     transition: right 0.5s;
     position: fixed;
+}
+
+.hamburger-menu.active{
+    right: 0;
 }
 
 .hamburger-menu a{
@@ -158,6 +163,11 @@ scrollbar-width: none;  /* Firefox */
     font-size: xx-large;
     cursor: pointer;
     z-index: 1;
+    transition: transform 0.5s;
+}
+
+.hamburger.active{
+    transform: rotate(360deg);
 }
 
 .welcome-page{

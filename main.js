@@ -2,32 +2,33 @@
 
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".hamburger-menu");
-
-
-function closeMenu(){
-    menu.style.right = "-100%";
-    hamburger.classList = "fa fa-bars hamburger";   
-}
+const linkElements = menu.querySelectorAll('.link-item');
 
 function rotateButton(btn){
     return btn.animate([{transform: "rotate(360deg)"}], {duration: 500})
 }
 
 hamburger.addEventListener("click", () => {
-
-    const animation = rotateButton(hamburger);
-
-    setTimeout(() => {if (menu.style.right == "-100%")
-    {
-        menu.style.right = "0";
-        hamburger.classList = "fa fa-remove hamburger";
+    menu.classList.toggle('active');
+    if (hamburger.classList.contains('active')){
+        hamburger.classList = "fa fa-bars hamburger";
     }
-    else
-    {   
-        closeMenu();
-    }}, 250);
-})
+    else{
+        hamburger.classList = "fa fa-remove hamburger active";
+    }
+});
 
+linkElements.forEach(linkElement => {
+    linkElement.addEventListener("click", () => {
+        menu.classList.toggle('active');
+        if (hamburger.classList.contains('active')){
+            hamburger.classList = "fa fa-bars hamburger";
+        }
+        else{
+            hamburger.classList = "fa fa-remove hamburger active";
+        }
+    })
+})
 
 // Theme Switching
 
