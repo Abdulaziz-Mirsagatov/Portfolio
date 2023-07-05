@@ -33,8 +33,6 @@ html{
     color: var(--text-color);
     font-family: var(--main-font);
     overflow-x: hidden;
-    /* background-image: url('/images/background.png');
-    background-size: 15px; */
 }
 
 button{
