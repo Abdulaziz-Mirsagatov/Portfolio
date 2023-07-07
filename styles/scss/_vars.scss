@@ -1,0 +1,22 @@
+/* Fredoka One */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+/* Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+// Colors
+$primaryColor: #ff7a00;
+$bgColorDark: #000;
+$bgColorLight: #fff;
+$textColorLight: #fff;
+$textColorDark: #000;
+
+// Font
+@mixin displayFont() {
+  font-family: "Fredoka One", cursive;
+  font-weight: bold;
+}
+
+@mixin mainFont() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}

@@ -1,0 +1,388 @@
+@use "_vars" as *;
+@use "_reset";
+
+html {
+  scroll-behavior: smooth;
+}
+
+// theme classes
+.dark-theme {
+  background-color: $bgColorDark;
+  color: $textColorLight;
+
+  .hamburger-menu {
+    background-color: $bgColorDark;
+  }
+
+  .social-media-group {
+    svg {
+      fill: $textColorLight;
+    }
+
+    .resume-btn {
+      background-color: $bgColorLight;
+      color: $textColorDark;
+    }
+  }
+
+  .project-container {
+    box-shadow: 0 0 15px rgba($color: $bgColorLight, $alpha: 0.2);
+
+    button {
+      background-color: $bgColorLight;
+      color: $textColorDark;
+    }
+  }
+}
+
+.light-theme {
+  background-color: $bgColorLight;
+  color: $textColorDark;
+
+  .hamburger-menu {
+    background-color: $bgColorLight;
+  }
+
+  .social-media-group {
+    svg {
+      fill: $textColorDark;
+    }
+
+    .resume-btn {
+      background-color: $bgColorDark;
+      color: $textColorLight;
+    }
+  }
+
+  .project-container {
+    box-shadow: 0 0 15px rgba($color: $bgColorDark, $alpha: 0.5);
+
+    button {
+      background-color: $bgColorDark;
+      color: $textColorLight;
+    }
+  }
+}
+//
+
+.wrapper {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  @include mainFont;
+  gap: 5em;
+}
+
+.home-section {
+  height: 100dvh;
+  align-content: center;
+
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .theme-switcher {
+      border-radius: 1.2em;
+      position: relative;
+      padding: 0.5em 0.6em;
+      background-color: #535353;
+      align-items: center;
+      gap: 0.3em;
+      cursor: pointer;
+      border: none;
+      outline: none;
+
+      i {
+        display: inline;
+        margin-inline: 0.1em;
+        color: #fff;
+      }
+
+      .switch-ball {
+        width: 1.3em;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        transition: left 0.2s;
+      }
+    }
+
+    .menu,
+    .hamburger-menu {
+      @include displayFont;
+      font-size: 1.6rem;
+      transition: color 0.5s;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .hamburger-menu {
+      position: fixed;
+      right: -100%;
+      justify-items: center;
+      align-content: center;
+      top: 0;
+      gap: 5em;
+      height: 100%;
+      width: 100%;
+      transition: right 0.5s;
+    }
+
+    .hamburger-menu.active {
+      right: 0;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .hamburger {
+      font-size: xx-large;
+      cursor: pointer;
+      z-index: 1;
+      transition: transform 0.5s;
+    }
+
+    .hamburger.active {
+      transform: rotate(360deg);
+    }
+  }
+
+  .welcome-page {
+    justify-items: center;
+
+    h1 {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .bar {
+      height: 0.8em;
+      width: min(90%, 38em);
+      background-color: $primaryColor;
+      border-radius: 3px;
+      margin: 1.5em 0;
+    }
+
+    .social-media-group {
+      align-items: center;
+      gap: 1em;
+
+      .icon {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      svg {
+        cursor: pointer;
+        width: 1.5rem;
+      }
+
+      .resume-btn {
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+        font-weight: bold;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border: none;
+        transition: background-color, color 0.5s;
+      }
+    }
+  }
+}
+
+.projects-section {
+  justify-items: center;
+
+  h1 {
+    @include displayFont;
+    margin-bottom: 1.5em;
+  }
+
+  .projects-container {
+    gap: 2em;
+    width: 90%;
+
+    .project-container {
+      gap: 1em;
+      padding: 1em;
+      border-radius: 0.4em;
+
+      .project-image {
+        width: 100%;
+        border-radius: 0.4em;
+      }
+
+      .project-desc {
+        text-align: left;
+      }
+
+      .button-group {
+        gap: 0.5em;
+        justify-content: right;
+
+        button {
+          padding: 0.5em 1em;
+          font-size: 1rem;
+          border-radius: 8px;
+          cursor: pointer;
+          border: none;
+          transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+
+          i {
+            margin-right: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-section {
+  background-color: $primaryColor;
+  gap: 0.5em;
+  justify-items: center;
+  color: #fff;
+  padding: 1em;
+  border-radius: 0.5em 0.5em 0 0;
+
+  h1 {
+    text-align: center;
+    @include displayFont;
+  }
+
+  ul li {
+    margin: 0.5em 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+// Tablet Design
+@media (min-width: 720px) {
+  .home-section {
+    .navbar {
+      padding: 2em 4em;
+
+      .menu {
+        display: flex;
+        gap: 2em;
+      }
+
+      .hamburger-menu,
+      .hamburger {
+        display: none;
+      }
+    }
+
+    .welcome-page {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .social-media-group {
+        gap: 1.5em;
+
+        .icon {
+          font-size: 2.5rem;
+        }
+
+        svg {
+          width: 2.5rem;
+        }
+
+        .resume-btn {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .projects-section {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .projects-container .project-container {
+      padding: 2em;
+
+      .project-desc {
+        font-size: 1.5rem;
+      }
+
+      .button-group {
+        gap: 1.5em;
+
+        button {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .contact-section {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      width: 90%;
+
+      li {
+        font-size: 1.5rem;
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .welcome-page h1,
+  h1 {
+    font-size: xx-large;
+  }
+
+  .menu {
+    font-size: x-large;
+  }
+
+  .navbar {
+    padding: 2em 4em;
+  }
+
+  .contact-section ul li {
+    font-size: x-large;
+  }
+
+  .hamburger-menu a:hover,
+  .menu a:hover {
+    color: var(--main-color);
+  }
+
+  .project-container .button-group button:hover {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px var(--main-color);
+  }
+
+  .resume-btn:hover,
+  .welcome-page .flexbox .icon:hover {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px var(--main-color);
+  }
+
+  .project-desc {
+    font-size: 1.2em;
+  }
+}

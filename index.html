@@ -1,94 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="https://kit.fontawesome.com/ba4436c6f7.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/ba4436c6f7.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Abdulaziz Mirsagatov - Portfolio</title>
-</head>
-<body class="grid">
-<div class="wrapper grid">
-    
-        <section class="home-section grid-item flexbox" id="home-section">
-            <nav class="navbar flexbox">
-                <button class="theme-switcher" id="theme-switcher">
-                    <i class="dark-icon fa fa-moon"></i>
-                    <div class="switch-ball" style="left: 0.5em;"></div>
-                    <i class="light-icon fa fa-sun"></i>
-                </button>
-                <ul class="flexbox hamburger-menu">
-                    <li><a href="#home-section" class="link-item">Home</a></li>
-                    <li><a href="#projects-section" class="link-item">Projects</a></li>
-                    <li><a href="#contact-section" class="link-item">Contact</a></li>
-                </ul>
-                <ul class="flexbox menu">
-                    <li><a href="#home-section" class="link-item">Home</a></li>
-                    <li><a href="#projects-section" class="link-item">Projects</a></li>
-                    <li><a href="#contact-section" class="link-item">Contact</a></li>
-                </ul>
-                <i class="fa fa-bars hamburger"></i>
-            </nav>
-    
-            <div class="welcome-page flexbox">
-                <h1>Hi, I am Abdulaziz Mirsagatov</h1>
-                <h1>I am a Full-Stack Web Developer</h1>
-                <div class="bar"></div>
-                <div class="flexbox">
-                    <a href="https://github.com/Abdulaziz-Mirsagatov" target="_blank"><i class="fa fa-github icon"></i></a>
-                    <a href="https://www.linkedin.com/in/abdulaziz-mirsagatov-085616230/" target="_blank"><i class="fa fa-linkedin icon"></i></a>
-                    <button class="resume-btn" onclick="window.open('files/Mirsagatov_Abdulaziz_Resume_2022.pdf')">Get Resume</button>
-                </div>
+  </head>
+  <body class="dark-theme">
+    <div class="wrapper grid">
+      <section class="home-section grid" id="home-section">
+        <nav class="navbar flex">
+          <button class="theme-switcher flex" id="theme-switcher">
+            <i class="dark-icon fa fa-moon"></i>
+            <div class="switch-ball" style="left: 0.5em"></div>
+            <i class="light-icon fa fa-sun"></i>
+          </button>
+          <ul class="grid hamburger-menu">
+            <li><a href="#home-section" class="link-item">Home</a></li>
+            <li><a href="#projects-section" class="link-item">Projects</a></li>
+            <li><a href="#contact-section" class="link-item">Contact</a></li>
+          </ul>
+          <ul class="flex menu">
+            <li><a href="#home-section" class="link-item">Home</a></li>
+            <li><a href="#projects-section" class="link-item">Projects</a></li>
+            <li><a href="#contact-section" class="link-item">Contact</a></li>
+          </ul>
+          <i class="fa fa-bars hamburger"></i>
+        </nav>
+
+        <div class="welcome-page grid">
+          <h1>Hi, I am Abdulaziz Mirsagatov</h1>
+          <h1>I am a Full-Stack Web Developer</h1>
+          <div class="bar"></div>
+          <div class="social-media-group flex">
+            <a href="https://github.com/Abdulaziz-Mirsagatov" target="_blank"
+              ><i class="fa fa-github icon"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/abdulaziz-mirsagatov-085616230/"
+              target="_blank"
+              ><i class="fa fa-linkedin icon"></i
+            ></a>
+            <a
+              href="https://www.frontendmentor.io/profile/Abdulaziz-Mirsagatov"
+              target="_blank"
+            >
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Frontend Mentor</title>
+                <path
+                  d="M12.1706 1.2719a.732.732 0 00-.7186.732v13.914a.732.732 0 00.732.732.732.732 0 00.7318-.732V2.004a.732.732 0 00-.7452-.732zm11.0741 4.1685a.7339.7339 0 00-.2764.063L16.686 8.307a.7329.7329 0 000 1.3361l6.2823 2.8134a.7378.7378 0 00.2993.0648.732.732 0 00.2973-1.401l-4.786-2.1443 4.786-2.1366a.7339.7339 0 00.3698-.9664.7339.7339 0 00-.69-.4327zm-22.499 5.032a.7316.7316 0 00-.7223.9149c1.736 6.677 7.7748 11.341 14.6822 11.341a.732.732 0 000-1.464 13.7055 13.7055 0 01-13.266-10.2449.7316.7316 0 00-.6939-.547z"
+                />
+              </svg>
+            </a>
+            <a href="https://www.freecodecamp.org/mirsagatov" target="_blank"
+              ><i class="fa fa-free-code-camp icon"></i
+            ></a>
+            <button
+              class="resume-btn"
+              onclick="window.open('files/Mirsagatov_Abdulaziz_Resume_2022.pdf')"
+            >
+              Get Resume
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects-section grid" id="projects-section">
+        <h1>My Projects</h1>
+        <div class="projects-container grid">
+          <div class="project-container grid">
+            <img
+              src="./images/todo.png"
+              alt="project image"
+              class="project-image"
+            />
+            <p class="project-desc">
+              A todo list application built with the Express module of Node.js
+              and MongoDB. Create your own account, add and manage your own
+              tasks! You can logout and login at any time. <br /><br /><span
+                class="important-text"
+                >You can use a test account if you want: <br />user@mail.com
+                <br />myPassword</span
+              >
+            </p>
+            <div class="button-group flex">
+              <a
+                href="https://github.com/Abdulaziz-Mirsagatov/express-todo"
+                target="_blank"
+                ><button class="github">
+                  <i class="fa fa-github"></i> View Code
+                </button></a
+              >
+              <a href="https://express-todo-44i5.onrender.com" target="_blank"
+                ><button class="try-it">Live Demo</button></a
+              >
             </div>
-        </section>
-    
-        <section class="projects-section grid-item flexbox" id="projects-section">
-            <h1>My Projects</h1>
-            <div class="projects-container flexbox">
-                <div class="project-container flexbox">
-                    <img src="./images/todo.png" alt="project image" class="project-image">
-                    <p class="project-desc">A todo list application built with the Express module of Node.js and MongoDB. Create your own account, add and manage your own tasks! You can logout and login at any time. <br><br><span class="important-text">You can use a test account if you want: <br>user@mail.com <br>myPassword</span></p>
-                    <div class="button-group">
-                        <a href="https://github.com/Abdulaziz-Mirsagatov/express-todo" target="_blank"><button class="github"><i class="fa fa-github"></i> See Code</button></a>
-                        <a href="https://express-todo-44i5.onrender.com" target="_blank"><button class="try-it">Try it</button></a>
-                    </div>
-                </div>
-                <div class="project-container flexbox">
-                    <img src="./images/weatherAPI.png" alt="project image" class="project-image">
-                    <p class="project-desc">Weather Application build with Python's Flask module. It uses <a href="https://openweathermap.org/api" style="color: var(--main-color);">OpenWeatherMap</a>'s API to provide you with the weather information about hundreds of cities around the world! You can choose to add and remove a city.</p>
-                    <div class="button-group">
-                        <a href="https://github.com/Abdulaziz-Mirsagatov/WeatherApp" target="_blank"><button class="github"><i class="fa fa-github"></i> See Code</button></a>
-                        <a href="https://weatherapi-qyz4.onrender.com" target="_blank"><button class="try-it">Try it</button></a>
-                    </div>
-                </div>
-                <div class="project-container flexbox">
-                    <img src="./images/pomodoroTimer.png" alt="project image" class="project-image">
-                    <p class="project-desc">Pomodoro Timer Application built with the React framework and some HTML & CSS. You can manage the durations of timer and breaks, start/stop and refresh the timer at any time. A great application for managing your daily tasks!</p>
-                    <div class="button-group">
-                        <a href="https://codepen.io/abdulaziz789/full/XWdoogg" target="_blank"><button class="try-it">Try it</button></a>
-                    </div>
-                </div>
-                <div class="project-container flexbox">
-                    <img src="./images/jsCalculator.png" alt="project image" class="project-image">
-                    <p class="project-desc">Web Calculator built with HTML, CSS, and JavaScript. It is a calculator with a nice UI that can perform most of the basic arithmetic operations.</p>
-                    <div class="button-group">
-                        <a href="https://codepen.io/abdulaziz789/full/WNwaqNm" target="_blank"><button class="try-it">Try it</button></a>
-                    </div>
-                </div>
+          </div>
+          <div class="project-container grid">
+            <img
+              src="./images/weatherAPI.png"
+              alt="project image"
+              class="project-image"
+            />
+            <p class="project-desc">
+              Weather Application build with Python's Flask module. It uses
+              <a
+                href="https://openweathermap.org/api"
+                style="color: var(--main-color)"
+                >OpenWeatherMap</a
+              >'s API to provide you with the weather information about hundreds
+              of cities around the world! You can choose to add and remove a
+              city.
+            </p>
+            <div class="button-group flex">
+              <a
+                href="https://github.com/Abdulaziz-Mirsagatov/WeatherApp"
+                target="_blank"
+                ><button class="github">
+                  <i class="fa fa-github"></i> View Code
+                </button></a
+              >
+              <a href="https://weatherapi-qyz4.onrender.com" target="_blank"
+                ><button class="try-it">Live Demo</button></a
+              >
             </div>
-        </section>
-    
-        <section class="contact-section grid-item flexbox" id="contact-section">
-            <h1>Contact Me</h1>
-            <ul>
-                <li>Email: mirsagah@mail.uc.edu</li>
-                <li>Phone: +1 (513) 882-4628</li>
-            </ul>
-        </section>
-</div>
+          </div>
+          <div class="project-container grid">
+            <img
+              src="./images/pomodoroTimer.png"
+              alt="project image"
+              class="project-image"
+            />
+            <p class="project-desc">
+              Pomodoro Timer Application built with the React framework and some
+              HTML & CSS. You can manage the durations of timer and breaks,
+              start/stop and refresh the timer at any time. A great application
+              for managing your daily tasks!
+            </p>
+            <div class="button-group flex">
+              <a
+                href="https://codepen.io/abdulaziz789/full/XWdoogg"
+                target="_blank"
+                ><button class="try-it">Live Demo</button></a
+              >
+            </div>
+          </div>
+          <div class="project-container grid">
+            <img
+              src="./images/jsCalculator.png"
+              alt="project image"
+              class="project-image"
+            />
+            <p class="project-desc">
+              Web Calculator built with HTML, CSS, and JavaScript. It is a
+              calculator with a nice UI that can perform most of the basic
+              arithmetic operations.
+            </p>
+            <div class="button-group flex">
+              <a
+                href="https://codepen.io/abdulaziz789/full/WNwaqNm"
+                target="_blank"
+                ><button class="try-it">Live Demo</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section grid" id="contact-section">
+        <h1>Contact Me</h1>
+        <ul>
+          <li>Email: mirsagah@mail.uc.edu</li>
+          <li>Phone: +1 (513) 882-4628</li>
+        </ul>
+      </section>
+    </div>
 
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
