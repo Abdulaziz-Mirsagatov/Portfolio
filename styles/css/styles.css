@@ -1,7 +1,7 @@
 /* Fredoka One */
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
-/* Open Sans */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* Ubuntu */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 *,
 *::before,
 *::after {
@@ -89,7 +89,10 @@ html {
   color: #000;
 }
 .dark-theme .project-container {
-  box-shadow: 0 0.5em 1.5em rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0em 1em rgba(255, 255, 255, 0.2);
+}
+.dark-theme .project-container .project-image {
+  border: 3px solid #fff;
 }
 .dark-theme .project-container button {
   background-color: #fff;
@@ -117,7 +120,10 @@ html {
   color: #fff;
 }
 .light-theme .project-container {
-  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.light-theme .project-container .project-image {
+  border: 3px solid #000;
 }
 .light-theme .project-container button {
   background-color: #000;
@@ -127,7 +133,7 @@ html {
 .wrapper {
   min-height: 100dvh;
   overflow-x: hidden;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   gap: 5em;
 }
@@ -290,6 +296,7 @@ html {
 .projects-section .projects-container .project-container .button-group button {
   padding: 0.5em 1em;
   font-size: 1rem;
+  font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
   border: none;

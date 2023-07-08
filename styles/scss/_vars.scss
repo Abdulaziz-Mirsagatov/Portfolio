@@ -1,7 +1,7 @@
 /* Fredoka One */
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
-/* Open Sans */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* Ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 // Colors
 $primaryColor: #ff7a00;
@@ -17,6 +17,6 @@ $textColorDark: #000;
 }
 
 @mixin mainFont() {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }

@@ -36,7 +36,11 @@ html {
   }
 
   .project-container {
-    box-shadow: 0 0.5em 1.5em rgba($color: $bgColorLight, $alpha: 0.2);
+    box-shadow: 0 0em 1em rgba($color: $bgColorLight, $alpha: 0.2);
+
+    .project-image{
+      border: 3px solid $bgColorLight;
+    }
 
     button {
       background-color: $bgColorLight;
@@ -75,7 +79,11 @@ html {
   }
 
   .project-container {
-    box-shadow: 0 1em 1em rgba($color: $bgColorDark, $alpha: 0.5);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .project-image{
+      border: 3px solid $bgColorDark;
+    }
 
     button {
       background-color: $bgColorDark;
@@ -273,6 +281,7 @@ html {
         button {
           padding: 0.5em 1em;
           font-size: 1rem;
+          font-weight: bold;
           border-radius: 8px;
           cursor: pointer;
           border: none;

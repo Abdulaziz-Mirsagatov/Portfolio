@@ -1,22 +1,20 @@
-// Hamburger hamburger-menu
-
+// Hamburger Menu
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".hamburger-menu");
 const linkElements = menu.querySelectorAll(".link-item");
 
-hamburger.addEventListener("click", () => {
+const toggleHamburger = () => {
   hamburger.classList.toggle("active");
   menu.classList.toggle("active");
-});
+};
+
+hamburger.addEventListener("click", toggleHamburger);
 
 linkElements.forEach((linkElement) => {
-  linkElement.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  });
+  linkElement.addEventListener("click", toggleHamburger);
 });
 
 // Theme Switching
-
 const themeSwitcher = document.querySelector(".theme-switcher");
 const bodyElement = document.querySelector("body");
 const switchBall = document.querySelector(".switch-ball");
