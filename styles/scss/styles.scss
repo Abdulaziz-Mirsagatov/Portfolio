@@ -10,8 +10,18 @@ html {
   background-color: $bgColorDark;
   color: $textColorLight;
 
-  .hamburger-menu {
+  .navbar {
     background-color: $bgColorDark;
+  }
+
+  .hamburger {
+    .bar {
+      background-color: $bgColorLight;
+    }
+  }
+
+  .hamburger-menu {
+    background-color: rgba($color: #000000, $alpha: 0.9);
   }
 
   .social-media-group {
@@ -26,7 +36,7 @@ html {
   }
 
   .project-container {
-    box-shadow: 0 0 15px rgba($color: $bgColorLight, $alpha: 0.2);
+    box-shadow: 0 0.5em 1.5em rgba($color: $bgColorLight, $alpha: 0.2);
 
     button {
       background-color: $bgColorLight;
@@ -34,13 +44,23 @@ html {
     }
   }
 }
-
+// theme classes
 .light-theme {
   background-color: $bgColorLight;
   color: $textColorDark;
 
-  .hamburger-menu {
+  .navbar {
     background-color: $bgColorLight;
+  }
+
+  .hamburger {
+    .bar {
+      background-color: $bgColorDark;
+    }
+  }
+
+  .hamburger-menu {
+    background-color: rgba($color: $bgColorLight, $alpha: 0.9);
   }
 
   .social-media-group {
@@ -55,7 +75,7 @@ html {
   }
 
   .project-container {
-    box-shadow: 0 0 15px rgba($color: $bgColorDark, $alpha: 0.5);
+    box-shadow: 0 1em 1em rgba($color: $bgColorDark, $alpha: 0.5);
 
     button {
       background-color: $bgColorDark;
@@ -128,12 +148,13 @@ html {
     .hamburger-menu {
       position: fixed;
       right: -100%;
-      justify-items: center;
-      align-content: center;
+      justify-items: start;
+      align-content: start;
+      padding: 4em 2em;
       top: 0;
-      gap: 5em;
+      gap: 2em;
       height: 100%;
-      width: 100%;
+      width: 60%;
       transition: right 0.5s;
     }
 
@@ -146,14 +167,31 @@ html {
     }
 
     .hamburger {
-      font-size: xx-large;
       cursor: pointer;
+      align-content: space-between;
       z-index: 1;
-      transition: transform 0.5s;
+      width: 2.2em;
+      height: 1.5em;
+
+      .bar {
+        height: 0.25em;
+        border-radius: 3px;
+        transition: transform 0.3s, height 0.3s;
+      }
     }
 
     .hamburger.active {
-      transform: rotate(360deg);
+      .bar:first-of-type {
+        transform: rotate(45deg) translate(0.1em, 0.8em);
+      }
+
+      .bar:nth-of-type(2) {
+        height: 0;
+      }
+
+      .bar:last-of-type {
+        transform: rotate(-45deg) translate(0.1em, -0.8em);
+      }
     }
   }
 
@@ -206,20 +244,22 @@ html {
   h1 {
     @include displayFont;
     margin-bottom: 1.5em;
+    color: $primaryColor;
   }
 
   .projects-container {
     gap: 2em;
     width: 90%;
+    align-items: start;
 
     .project-container {
       gap: 1em;
       padding: 1em;
-      border-radius: 0.4em;
+      border-radius: 1rem;
 
       .project-image {
         width: 100%;
-        border-radius: 0.4em;
+        border-radius: 0.5rem;
       }
 
       .project-desc {
@@ -293,43 +333,50 @@ html {
         gap: 1.5em;
 
         .icon {
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
 
         svg {
-          width: 2.5rem;
+          width: 2rem;
         }
 
         .resume-btn {
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
       }
     }
   }
 
   .projects-section {
+    max-width: 1280px;
+    margin-inline: auto;
+
     h1 {
       font-size: 2.5rem;
     }
 
-    .projects-container .project-container {
-      padding: 2em;
+    .projects-container {
+      .project-container {
+        padding: 2em;
 
-      .project-desc {
-        font-size: 1.5rem;
-      }
+        .project-desc {
+          font-size: 1.5rem;
+        }
 
-      .button-group {
-        gap: 1.5em;
+        .button-group {
+          gap: 1.5em;
 
-        button {
-          font-size: 1.2rem;
+          button {
+            font-size: 1.2rem;
+          }
         }
       }
     }
   }
 
   .contact-section {
+    border-radius: 1em 1em 0 0;
+
     ul {
       display: flex;
       justify-content: space-around;
@@ -346,43 +393,73 @@ html {
   }
 }
 
+// Desktop Design
 @media screen and (min-width: 1080px) {
-  .welcome-page h1,
-  h1 {
-    font-size: xx-large;
+  .home-section {
+    .navbar {
+      .menu .link-item {
+        transition: color 0.3s;
+      }
+
+      .menu .link-item:hover {
+        color: $primaryColor;
+      }
+    }
+
+    .welcome-page {
+      .social-media-group {
+        .icon,
+        .resume-btn {
+          transition: color 0.3s;
+        }
+
+        svg {
+          transition: fill 0.3s;
+        }
+
+        .resume-btn {
+          transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .icon:hover {
+          color: $primaryColor;
+        }
+
+        svg:hover {
+          fill: $primaryColor;
+        }
+
+        .resume-btn:hover {
+          background-color: $primaryColor;
+          color: $textColorLight;
+          box-shadow: 0 0.5em 0.5em -0.1em rgba($color: $primaryColor, $alpha:
+                0.4);
+          transform: translateY(-0.15em);
+        }
+      }
+    }
   }
 
-  .menu {
-    font-size: x-large;
-  }
+  .projects-section {
+    .projects-container {
+      grid-template-columns: auto auto;
+      gap: 4em;
 
-  .navbar {
-    padding: 2em 4em;
-  }
+      .project-container {
+        border-radius: 1.5rem;
+        padding: 2em;
 
-  .contact-section ul li {
-    font-size: x-large;
-  }
+        .button-group {
+          button {
+            transition: box-shadow 0.3s, color 0.3s;
+          }
 
-  .hamburger-menu a:hover,
-  .menu a:hover {
-    color: var(--main-color);
-  }
-
-  .project-container .button-group button:hover {
-    background-color: var(--main-color);
-    color: var(--text-color);
-    box-shadow: 0 0 10px var(--main-color);
-  }
-
-  .resume-btn:hover,
-  .welcome-page .flexbox .icon:hover {
-    background-color: var(--main-color);
-    color: var(--text-color);
-    box-shadow: 0 0 10px var(--main-color);
-  }
-
-  .project-desc {
-    font-size: 1.2em;
+          button:hover {
+            box-shadow: inset 0 0 0 2em $primaryColor;
+            color: $textColorLight;
+          }
+        }
+      }
+    }
   }
 }

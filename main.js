@@ -4,27 +4,14 @@ const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".hamburger-menu");
 const linkElements = menu.querySelectorAll(".link-item");
 
-function rotateButton(btn) {
-  return btn.animate([{ transform: "rotate(360deg)" }], { duration: 500 });
-}
-
 hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
   menu.classList.toggle("active");
-  if (hamburger.classList.contains("active")) {
-    hamburger.classList = "fa fa-bars hamburger";
-  } else {
-    hamburger.classList = "fa fa-remove hamburger active";
-  }
 });
 
 linkElements.forEach((linkElement) => {
   linkElement.addEventListener("click", () => {
     menu.classList.toggle("active");
-    if (hamburger.classList.contains("active")) {
-      hamburger.classList = "fa fa-bars hamburger";
-    } else {
-      hamburger.classList = "fa fa-remove hamburger active";
-    }
   });
 });
 
