@@ -81,6 +81,13 @@ html {
 .dark-theme .hamburger-menu {
   background-color: rgba(0, 0, 0, 0.9);
 }
+.dark-theme .hamburger-menu a,
+.dark-theme .menu a {
+  color: #fff;
+}
+.dark-theme .social-media-group .icon {
+  color: #fff;
+}
 .dark-theme .social-media-group svg {
   fill: #fff;
 }
@@ -111,6 +118,13 @@ html {
 }
 .light-theme .hamburger-menu {
   background-color: rgba(255, 255, 255, 0.9);
+}
+.light-theme .hamburger-menu a,
+.light-theme .menu a {
+  color: #000;
+}
+.light-theme .social-media-group .icon {
+  color: #000;
 }
 .light-theme .social-media-group svg {
   fill: #000;
