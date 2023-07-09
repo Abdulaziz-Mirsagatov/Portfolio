@@ -46,6 +46,10 @@ html {
     }
   }
 
+  .about-section {
+    background-color: #0c0c0c;
+  }
+
   .project-container {
     box-shadow: 0 0em 1em rgba($color: $bgColorLight, $alpha: 0.2);
 
@@ -98,6 +102,10 @@ html {
       background-color: $bgColorDark;
       color: $textColorLight;
     }
+  }
+
+  .about-section {
+    background-color: #efeded;
   }
 
   .project-container {
@@ -273,6 +281,23 @@ html {
   }
 }
 
+.about-section {
+  padding: 2em 0;
+  justify-items: center;
+  text-align: center;
+  gap: 1em;
+
+  h1 {
+    color: $primaryColor;
+    @include displayFont;
+  }
+
+  p {
+    width: min(85%, 55ch);
+    font-size: 1rem;
+  }
+}
+
 .projects-section {
   justify-items: center;
 
@@ -382,6 +407,19 @@ html {
           grid-row: unset;
         }
       }
+    }
+  }
+
+  .about-section {
+    padding-top: 4em;
+    padding-bottom: 4em;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
     }
   }
 
