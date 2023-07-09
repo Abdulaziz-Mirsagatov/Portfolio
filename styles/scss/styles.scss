@@ -243,7 +243,9 @@ html {
 
     .social-media-group {
       align-items: center;
+      justify-content: center;
       gap: 1em;
+      grid-auto-flow: column;
 
       .icon {
         font-size: 1.5rem;
@@ -263,6 +265,9 @@ html {
         cursor: pointer;
         border: none;
         transition: background-color, color 0.5s;
+        grid-column: 1 / 6;
+        grid-row: 2;
+        justify-self: center;
       }
     }
   }
@@ -373,6 +378,8 @@ html {
 
         .resume-btn {
           font-size: 1.5rem;
+          grid-column: unset;
+          grid-row: unset;
         }
       }
     }
