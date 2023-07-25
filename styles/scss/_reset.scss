@@ -19,13 +19,15 @@ h4,
 h5,
 h6,
 a,
-button {
+button,
+input,
+textarea {
   font-family: inherit;
   font-weight: normal;
 }
 
-a:visited{
-    color: inherit;
+a:visited {
+  color: inherit;
 }
 
 button {
@@ -47,7 +49,7 @@ picture {
   display: grid;
 }
 
-body{
+body {
   line-height: 1.5;
 }
 

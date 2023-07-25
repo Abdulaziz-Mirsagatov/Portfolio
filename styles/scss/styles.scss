@@ -1,127 +1,10 @@
 @use "_vars" as *;
 @use "_reset";
+@use "_themes";
 
 html {
   scroll-behavior: smooth;
 }
-
-// theme classes
-.dark-theme {
-  background-color: $bgColorDark;
-  color: $textColorLight;
-
-  .navbar {
-    background-color: $bgColorDark;
-  }
-
-  .hamburger {
-    .bar {
-      background-color: $bgColorLight;
-    }
-  }
-
-  .hamburger-menu {
-    background-color: rgba($color: #000000, $alpha: 0.9);
-  }
-
-  .hamburger-menu,
-  .menu {
-    a {
-      color: $textColorLight;
-    }
-  }
-
-  .social-media-group {
-    .icon {
-      color: $textColorLight;
-    }
-
-    svg {
-      fill: $textColorLight;
-    }
-
-    .resume-btn {
-      background-color: $bgColorLight;
-      color: $textColorDark;
-    }
-  }
-
-  .about-section {
-    background-color: #0c0c0c;
-  }
-
-  .project-container {
-    box-shadow: 0 0em 1em rgba($color: $bgColorLight, $alpha: 0.2);
-
-    .project-image {
-      border: 3px solid $bgColorLight;
-    }
-
-    button {
-      background-color: $bgColorLight;
-      color: $textColorDark;
-    }
-  }
-}
-// theme classes
-.light-theme {
-  background-color: $bgColorLight;
-  color: $textColorDark;
-
-  .navbar {
-    background-color: $bgColorLight;
-  }
-
-  .hamburger {
-    .bar {
-      background-color: $bgColorDark;
-    }
-  }
-
-  .hamburger-menu {
-    background-color: rgba($color: $bgColorLight, $alpha: 0.9);
-  }
-
-  .hamburger-menu,
-  .menu {
-    a {
-      color: $textColorDark;
-    }
-  }
-
-  .social-media-group {
-    .icon {
-      color: $textColorDark;
-    }
-
-    svg {
-      fill: $textColorDark;
-    }
-
-    .resume-btn {
-      background-color: $bgColorDark;
-      color: $textColorLight;
-    }
-  }
-
-  .about-section {
-    background-color: #efeded;
-  }
-
-  .project-container {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-    .project-image {
-      border: 3px solid $bgColorDark;
-    }
-
-    button {
-      background-color: $bgColorDark;
-      color: $textColorLight;
-    }
-  }
-}
-//
 
 .wrapper {
   min-height: 100dvh;
@@ -348,6 +231,59 @@ html {
   }
 }
 
+.contact-me {
+  width: min(80%, 600px);
+  justify-self: center;
+  justify-items: center;
+  gap: 1em;
+
+  h1 {
+    @include displayFont;
+    color: $primaryColor;
+  }
+
+  #form {
+    width: 100%;
+
+    label:not(:first-of-type) {
+      margin-top: 0.8em;
+    }
+
+    input,
+    textarea {
+      border-radius: 5px;
+      font-size: 1rem;
+      padding: 1em;
+    }
+
+    input {
+      padding: 0.8em 1em;
+    }
+
+    .submit-btn {
+      margin-top: 1em;
+      width: 6em;
+      border: 0;
+      padding: 0.5em 0;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 8px;
+      justify-self: end;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+
+      :hover {
+        background-color: $primaryColor;
+      }
+    }
+
+    .submit-btn:hover {
+      background-color: $primaryColor;
+      color: $textColorLight;
+    }
+  }
+}
+
 .contact-section {
   background-color: $primaryColor;
   gap: 0.5em;
@@ -446,6 +382,28 @@ html {
             font-size: 1.2rem;
           }
         }
+      }
+    }
+  }
+
+  .contact-me {
+    margin-top: 4em;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    #form {
+      label,
+      input,
+      textarea,
+      .submit-btn {
+        font-size: 1.5rem;
+      }
+
+      input,
+      textarea {
+        border-radius: 10px;
       }
     }
   }

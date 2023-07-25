@@ -27,3 +27,7 @@ themeSwitcher.addEventListener("click", () => {
   if (switchBall.style.left == "0.5em") switchBall.style.left = "2em";
   else switchBall.style.left = "0.5em";
 });
+
+// Clear form after submission
+const form = document.querySelector("#form");
+form.addEventListener("submit", ({ target }) => target.reset());

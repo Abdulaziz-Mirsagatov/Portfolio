@@ -21,7 +21,9 @@ h4,
 h5,
 h6,
 a,
-button {
+button,
+input,
+textarea {
   font-family: inherit;
   font-weight: normal;
 }
@@ -64,10 +66,6 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .dark-theme {
   background-color: #000;
   color: #fff;
@@ -105,6 +103,10 @@ html {
   border: 3px solid #fff;
 }
 .dark-theme .project-container button {
+  background-color: #fff;
+  color: #000;
+}
+.dark-theme #form .submit-btn {
   background-color: #fff;
   color: #000;
 }
@@ -148,6 +150,14 @@ html {
 .light-theme .project-container button {
   background-color: #000;
   color: #fff;
+}
+.light-theme #form .submit-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -347,6 +357,52 @@ html {
   margin-right: 0.5em;
 }
 
+.contact-me {
+  width: min(80%, 600px);
+  justify-self: center;
+  justify-items: center;
+  gap: 1em;
+}
+.contact-me h1 {
+  font-family: "Fredoka One", cursive;
+  font-weight: bold;
+  color: #ff7a00;
+}
+.contact-me #form {
+  width: 100%;
+}
+.contact-me #form label:not(:first-of-type) {
+  margin-top: 0.8em;
+}
+.contact-me #form input,
+.contact-me #form textarea {
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 1em;
+}
+.contact-me #form input {
+  padding: 0.8em 1em;
+}
+.contact-me #form .submit-btn {
+  margin-top: 1em;
+  width: 6em;
+  border: 0;
+  padding: 0.5em 0;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  justify-self: end;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.contact-me #form .submit-btn :hover {
+  background-color: #ff7a00;
+}
+.contact-me #form .submit-btn:hover {
+  background-color: #ff7a00;
+  color: #fff;
+}
+
 .contact-section {
   background-color: #ff7a00;
   gap: 0.5em;
@@ -423,6 +479,22 @@ html {
   }
   .projects-section .projects-container .project-container .button-group button {
     font-size: 1.2rem;
+  }
+  .contact-me {
+    margin-top: 4em;
+  }
+  .contact-me h1 {
+    font-size: 2.5rem;
+  }
+  .contact-me #form label,
+  .contact-me #form input,
+  .contact-me #form textarea,
+  .contact-me #form .submit-btn {
+    font-size: 1.5rem;
+  }
+  .contact-me #form input,
+  .contact-me #form textarea {
+    border-radius: 10px;
   }
   .contact-section {
     border-radius: 1em 1em 0 0;
