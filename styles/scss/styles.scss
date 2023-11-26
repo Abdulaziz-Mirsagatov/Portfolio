@@ -165,7 +165,7 @@ html {
 }
 
 .about-section {
-  padding: 2em 0;
+  padding: 4em 0;
   justify-items: center;
   text-align: center;
   gap: 1em;
@@ -183,6 +183,7 @@ html {
 
 .projects-section {
   justify-items: center;
+  padding-top: 4em;
 
   h1 {
     @include displayFont;
@@ -236,6 +237,7 @@ html {
   justify-self: center;
   justify-items: center;
   gap: 1em;
+  padding-top: 4em;
 
   h1 {
     @include displayFont;
@@ -347,7 +349,7 @@ html {
   }
 
   .about-section {
-    padding-top: 4em;
+    padding-top: 6em;
     padding-bottom: 4em;
 
     h1 {
@@ -362,6 +364,7 @@ html {
   .projects-section {
     max-width: 1280px;
     margin-inline: auto;
+    padding-top: 6em;
 
     h1 {
       font-size: 2.5rem;
@@ -388,6 +391,7 @@ html {
 
   .contact-me {
     margin-top: 4em;
+    padding-top: 6em;
 
     h1 {
       font-size: 2.5rem;

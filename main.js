@@ -14,6 +14,16 @@ linkElements.forEach((linkElement) => {
   linkElement.addEventListener("click", toggleHamburger);
 });
 
+// Initial Theme Setting
+let className = "dark-theme";
+if (window.matchMedia) {
+  // Check if the dark-mode Media-Query matches
+  if(!window.matchMedia('(prefers-color-scheme: dark)').matches){
+    className = "light-theme";
+  }
+} 
+document.querySelector("body").className = className;
+
 // Theme Switching
 const themeSwitcher = document.querySelector(".theme-switcher");
 const bodyElement = document.querySelector("body");
